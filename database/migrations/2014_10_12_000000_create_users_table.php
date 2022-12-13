@@ -21,12 +21,12 @@ return new class extends Migration
             $table->boolean('vip')->default(0);
             $table->timestamps();
         });
-        User::create(['name' => 'Gréta Fekete' , 'email'=> 'G.Fekete@mail.com','vip'=>0]);
-        User::create(['name' => 'János Pap' , 'email'=> 'J.Pap@mail.com','vip'=>0]);
-        User::create(['name' => 'Ádám Fekete' , 'email'=> 'A.Fekete@mail.com','vip'=>0]);
-        User::create(['name' => 'Botond Székely' , 'email'=> 'Botond.Sz@mail.com','vip'=>1]);
-        User::create(['name' => 'Bendegúz Kerekes' , 'email'=> 'K.Bendeguz@mail.com','vip'=>0]);
-        User::create(['name' => 'Imre Hegedűs' , 'email'=> 'I.Hegedus@mail.com','vip'=>1]);
+        User::create(['name' => 'Greta Fekete' , 'email'=> 'G.Fekete@mail.com','vip'=>0]);
+        User::create(['name' => 'Janos Pap' , 'email'=> 'J.Pap@mail.com','vip'=>0]);
+        User::create(['name' => 'AdAm Fekete' , 'email'=> 'A.Fekete@mail.com','vip'=>0]);
+        User::create(['name' => 'Botond Szekely' , 'email'=> 'Botond.Sz@mail.com','vip'=>1]);
+        User::create(['name' => 'Bendeguz Kerekes' , 'email'=> 'K.Bendeguz@mail.com','vip'=>0]);
+        User::create(['name' => 'Imre Hegedus' , 'email'=> 'I.Hegedus@mail.com','vip'=>1]);
     }
 
 
