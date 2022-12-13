@@ -17,6 +17,13 @@ class VerifyCsrfToken extends Middleware
         '/api/delete_event/*',
         '/api/new_participate',
         '/api/update_participate_present/*/*',
-        '/api/participate_delete/*/*'
+        '/api/participate_delete/*/*',
+        '/api/new_agency',
+        '/api/update_agency/*',
+        '/api/destroy_agency/*',
+        'api/users',
+        'api/users/*',
+        'api/users_destroyer/*'
+
     ];
 }
