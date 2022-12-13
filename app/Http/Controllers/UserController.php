@@ -24,6 +24,7 @@ class UserController extends Controller
         $user = new User();
         $user->name = $request -> name;
         $user->email = $request -> email;
+        $user->password = Hash::make($request->password);
         $user->vip = $request -> vip;
         $user -> save();
     }
@@ -31,14 +32,14 @@ class UserController extends Controller
         $user = User::find($id);
         $user->name = $request -> name;
         $user->email = $request -> email;
+        $user->password = Hash::make($request->password);
         $user->vip = $request -> vip;
         $user -> save();
     }
     public function updateName(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            "name" => 'string|min:3|max:50',
-            "name" => array( 'required', 'regex:/(^[A-Z][a-z]+ + [A-Z][a-z]+')
+            "name" => array( 'string','required', 'regex:/(^[A-Z][a-z]+ + [A-Z][a-z]+')
         ]);
         if ($validator->fails()) {
             return response()->json(["message" => $validator->errors()->all()], 400);
